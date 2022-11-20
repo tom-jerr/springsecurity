@@ -32,13 +32,14 @@ public class LoginServiceImpl implements LoginService{
 //    ctrl-alt-b:查看实现类
     @Override
     public ResponseResult login(User user) {
+        //使用AuthenticationManager进行认证
         UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(user.getUserName(),user.getPassword());
         Authentication authenticate = authenticationManager.authenticate(usernamePasswordAuthenticationToken);
 
         if (Objects.isNull(authenticate)){
             throw new RuntimeException("登录失败");
         }
-
+        //如果认证通过了，使用userid生成一个jwt jwt存入ResponseResult返回
         LoginUser loginUser = (LoginUser) authenticate.getPrincipal();
         String userid = loginUser.getUser().getId().toString();
         String jwt = JwtUtil.createJWT(userid);
@@ -46,6 +47,7 @@ public class LoginServiceImpl implements LoginService{
         Map<String,String> map = new HashMap<>();
         map.put("token",jwt);
         //把完整的用户信息存入redis  userid作为key
+        //需要开启redis服务器才能测试
         redisCache.setCacheObject("login:"+userid,loginUser);
         return new ResponseResult<>(200,"登录成功",map);
     }
