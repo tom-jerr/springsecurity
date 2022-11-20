@@ -24,8 +24,8 @@ public class MapperTest {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String encode = passwordEncoder.encode("1234");
         System.out.println(encode);
-        boolean matches = passwordEncoder.matches("1234", "$2a$10$KkAPZI6q.OIIrTS/r9x77enbqOFeuYwGAfFJPM0u5Jvd8D8Hm6y3W");
-        System.out.println(matches);
+//        boolean matches = passwordEncoder.matches("1234", "$2a$10$KkAPZI6q.OIIrTS/r9x77enbqOFeuYwGAfFJPM0u5Jvd8D8Hm6y3W");
+//        System.out.println(matches);
     }
 
     @Test
