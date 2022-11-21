@@ -3,6 +3,7 @@ package com.uestc.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.uestc.domain.LoginUser;
 import com.uestc.domain.User;
+import com.uestc.mapper.MenuMapper;
 import com.uestc.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -26,6 +27,9 @@ public class UserServiceImpl implements UserDetailsService {
     @Autowired
     private UserMapper userMapper;
 
+    @Autowired
+    private MenuMapper menuMapper;
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         //查询用户信息
@@ -37,8 +41,8 @@ public class UserServiceImpl implements UserDetailsService {
         }
 
         //TODO 查询对应的权限信息
-        List<String> list = new ArrayList<>(Arrays.asList("test","admin"));
+        List<String> permissionKeylist = menuMapper.selectPermsByUserId(user.getId());
 
-        return new LoginUser(user,list);
+        return new LoginUser(user,permissionKeylist);
     }
 }
