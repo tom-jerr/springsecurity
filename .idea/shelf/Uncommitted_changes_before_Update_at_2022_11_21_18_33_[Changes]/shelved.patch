@@ -1,0 +1,47 @@
+Index: target/classes/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring:\r\n  datasource:\r\n    url: jdbc:mysql://localhost:3306/dzkd2022db?characterEncoding=utf-8&serverTimezone=UTC\r\n    username: root\r\n    password: 123\r\n    driver-class-name: com.mysql.jdbc.Driver
+===================================================================
+diff --git a/target/classes/application.yml b/target/classes/application.yml
+--- a/target/classes/application.yml	
++++ b/target/classes/application.yml	
+@@ -1,6 +1,12 @@
+ spring:
+   datasource:
+-    url: jdbc:mysql://localhost:3306/dzkd2022db?characterEncoding=utf-8&serverTimezone=UTC
++    url: jdbc:mysql://localhost:3306/test_security?characterEncoding=utf-8&serverTimezone=UTC
+     username: root
+     password: 123
+-    driver-class-name: com.mysql.jdbc.Driver
+\ No newline at end of file
++    driver-class-name: com.mysql.jdbc.Driver
++
++mybatis-plus:
++  mapper location: classpath*:/mapper/**/*.xml
++
++server:
++  port: 8888
+\ No newline at end of file
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DataSourceManagerImpl\" format=\"xml\" multifile-model=\"true\">\r\n    <data-source source=\"LOCAL\" name=\"@localhost\" uuid=\"50691451-d1af-4bc9-a9c7-3a8805834ed1\">\r\n      <driver-ref>mysql</driver-ref>\r\n      <synchronize>true</synchronize>\r\n      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>\r\n      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>\r\n      <working-dir>$ProjectFileDir$</working-dir>\r\n    </data-source>\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+--- a/.idea/dataSources.xml	
++++ b/.idea/dataSources.xml	
+@@ -1,11 +1,11 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+-    <data-source source="LOCAL" name="@localhost" uuid="50691451-d1af-4bc9-a9c7-3a8805834ed1">
++    <data-source source="LOCAL" name="test_security@localhost" uuid="50691451-d1af-4bc9-a9c7-3a8805834ed1">
+       <driver-ref>mysql</driver-ref>
+       <synchronize>true</synchronize>
+       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+-      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
++      <jdbc-url>jdbc:mysql://localhost:3306/test_security</jdbc-url>
+       <working-dir>$ProjectFileDir$</working-dir>
+     </data-source>
+   </component>

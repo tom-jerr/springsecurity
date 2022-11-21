@@ -1,0 +1,34 @@
+<changelist name="Uncommitted_changes_before_Update_at_2022_11_21_18_33_[Changes]1" date="1669026820198" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_11_21_18_33_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2022/11/21 18:33 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/uestc/mapper/UserMapper.class" />
+    <option name="AFTER_PATH" value="target/classes/com/uestc/mapper/UserMapper.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_11_21_18_33_[Changes]1/UserMapper.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/test-classes/com/uestc/MapperTest.class" />
+    <option name="AFTER_PATH" value="target/test-classes/com/uestc/MapperTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_11_21_18_33_[Changes]1/MapperTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/uestc/controller/HelloController.class" />
+    <option name="AFTER_PATH" value="target/classes/com/uestc/controller/HelloController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_11_21_18_33_[Changes]1/HelloController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/uestc/service/impl/UserServiceImpl.class" />
+    <option name="AFTER_PATH" value="target/classes/com/uestc/service/impl/UserServiceImpl.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_11_21_18_33_[Changes]1/UserServiceImpl.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/uestc/config/SecurityConfig.class" />
+    <option name="AFTER_PATH" value="target/classes/com/uestc/config/SecurityConfig.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_11_21_18_33_[Changes]1/SecurityConfig.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/uestc/domain/LoginUser.class" />
+    <option name="AFTER_PATH" value="target/classes/com/uestc/domain/LoginUser.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_11_21_18_33_[Changes]1/LoginUser.class" />
+  </binary>
+</changelist>
